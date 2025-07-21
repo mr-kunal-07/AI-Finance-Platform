@@ -1,4 +1,3 @@
-import { SignedIn, SignedOut, SignIn, SignInButton, UserButton } from '@clerk/nextjs'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -22,7 +21,7 @@ const Header = () => {
 
                 <div className='flex items-center space-x-4 '>
 
-                    <SignedIn>
+                   
                         <Link href={'/dashboard'} className='text-gray-600 hover:text-blue-600 flex items-center gap2
                         '>
                             <Button variant='outline'>
@@ -39,20 +38,9 @@ const Header = () => {
                                 <span className='hidden md:inline' >Add Transaction</span>
                             </Button>
                         </Link>
-                    </SignedIn>
 
-                    <SignedOut>
-                        <SignInButton forceRedirectUrl='/dashboard' >
+                   
                             <Button variant='outline'>Login</Button>
-                        </SignInButton>
-                    </SignedOut>
-                    <SignedIn>
-                        <UserButton appearance={{
-                            elements:{
-                                avatarBox: 'w-10 h-10'
-                            }
-                        }} />
-                    </SignedIn>
                 </div>
 
 
